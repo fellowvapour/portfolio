@@ -2,6 +2,16 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
+:root {
+  --background-color: #ffffff;
+  --text-color: #000000;
+}
+
+.dark-mode {
+  --background-color: #121212;
+  --text-color: #ffffff;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -9,6 +19,9 @@
 
 body {
   font-family: "Poppins", sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
 }
 
 html {
@@ -429,4 +442,14 @@ footer {
 
 footer p {
   text-align: center;
+}
+
+/* DARK MODE TOGGLE */
+
+.toggle-button {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
 }
